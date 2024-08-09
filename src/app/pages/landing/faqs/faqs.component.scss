@@ -1,0 +1,56 @@
+@import '../../../../stylings/abstracts/mixins';
+@import '../../../../stylings/abstracts/variables';
+
+
+section.landing__faqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+    gap: 2rem;
+    .landing__faqs__content{
+        width: 50%;
+    }
+
+    .landing__faqs__icons{
+
+        color: $secondary-color;
+        .mat-icon {
+            width: 3rem;
+            height: 3rem;
+            font-size: 3rem;
+        }
+    }
+    &{
+        @include mobile{
+            .landing__faqs__content{
+
+                width: 70%;
+
+            }
+            .landing__faqs__icons{
+                .mat-icon{
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 2rem;
+                }
+            }
+
+        }
+    }
+}
+
+
+.mat-expansion-panel{
+    background: none;
+    border-bottom: .5px solid $secondary-color;
+    font-size: 1.2rem;
+    &{
+        @include mobile{
+
+            font-size: .8rem;
+
+        }
+    }
+}

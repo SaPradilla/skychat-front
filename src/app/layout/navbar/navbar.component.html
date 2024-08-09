@@ -1,0 +1,97 @@
+<header class="navbar"
+[class]="{'show': showMenuMobile, 'hide': showMenuMobile === false}"
+>
+    <div class="navbar__container">
+
+        <h2  (click)="redirectHome()" class="navbar__title-chat">SkyChat</h2>
+    
+
+        <button 
+            (click)="toggleMenuMobile()" 
+            class="navbar__container__mobile__button"
+            mat-icon-button
+            
+        >
+         
+            <mat-icon>
+                {{
+                    showMenuMobile 
+                    ? 'close'
+                    : 'menu'
+                }}
+            </mat-icon>
+        </button>
+
+        @if (showOptions) {
+
+         
+            <nav class="navbar-content">
+        
+                <ul>
+                    <li>
+                        <a  href="#what-sky">
+                            What is Sky?        
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#FAQS">
+                            FAQS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+        
+            </nav>
+        
+            <a class="navbar__container__join" color="primary" mat-flat-button href="/login">Join to Sky</a>
+        }@else {
+            <button class="navbar__container__auth" color="primary" mat-flat-button (click)="redirect()"> 
+                {{
+                    nextRoute === '/register' ? 'Login' : 'Register'
+                }}
+            </button>
+            
+        }
+        
+    </div>
+    <div class="navbar__container__mobile">
+        <nav class="navbar-content__mobile">
+
+            <ul>
+                <li>
+                    <a  href="#what-sky">
+                        What is Sky?        
+                    </a>
+                </li>
+                <li>
+                    <a href="#services">
+                        Services
+                    </a>
+                </li>
+                <li>
+                    <a href="#FAQS">
+                        FAQS
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+        <a class="navbar__container___mobile__join" color="primary" mat-flat-button href="/login">Join to Sky</a>
+    </div>
+    
+</header>

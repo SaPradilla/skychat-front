@@ -1,0 +1,12 @@
+.more-auth-bottons{
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+
+    button.more-auth-bottons__botton{
+        padding: 1.4rem;
+    }
+}

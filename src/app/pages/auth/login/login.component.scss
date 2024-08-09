@@ -1,0 +1,42 @@
+@import '../../../../stylings/abstracts/mixins';
+@import '../../../../stylings/abstracts/variables';
+
+.login{
+    margin-top: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    form.login__form{
+        display: flex;
+        flex-direction: column;
+        width: 15rem;
+        button{
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+    }
+    
+    &::before,
+    &::after{
+        @include blur-effect($primary-color,350px)
+    }
+    &::before{
+        top: 0;
+        // right: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+        // transform: translate(-30%);
+    }
+    &::after{
+        width: 300px;
+        height: 300px; 
+        right: 0;
+        bottom: 0;
+        // transform: translate(20%);
+    }
+}

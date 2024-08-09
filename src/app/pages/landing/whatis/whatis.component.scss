@@ -1,0 +1,50 @@
+@import '../../../../stylings/abstracts/mixins';
+@import '../../../../stylings/abstracts/variables';
+
+
+section.landing__whatis {
+    h3{
+        @include text-gradient($primary-color);   
+        text-align: center;
+    }
+
+    .landing__whatis__container{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        img.landing__whatis__vector{
+
+            height: 15rem;
+
+        }
+        div.landing__whatis__content{
+
+            width: 30rem;
+
+            p{
+                margin-top: 1rem;
+                font-size: 1.4rem;
+                span{
+                    color: $primary-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &{
+        @include mobile{
+
+            .landing__whatis__container{
+                flex-direction: column;
+                text-align: center;
+                div.landing__whatis__content{
+                    width: 15rem;
+                }
+            }
+        }
+    }
+
+}

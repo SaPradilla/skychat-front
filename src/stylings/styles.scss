@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import './abstracts/variables';
+@import './themes/angular-material';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import './elements/texts';
+
+
+$custom-primary-palette: mat.m2-define-palette($primary-color-theme);
+$custom-accent-palette: mat.m2-define-palette($accent-color-theme);
+$custom-warning-palette: mat.m2-define-palette($warn-color-theme);
+
+
+$skychat-front-theme: mat.m2-define-dark-theme((color: (primary:$custom-primary-palette,
+        accent:$custom-accent-palette,
+        warn:$custom-warning-palette,
+        // tertiary: mat.$blue-palette,
+),
+density: (scale: 0,
+)));
+
+
+:root {
+  @include mat.all-component-themes($skychat-front-theme);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $white-color;
+  background-color: $bg-color;
+}
+

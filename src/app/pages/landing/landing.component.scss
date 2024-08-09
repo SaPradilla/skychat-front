@@ -1,0 +1,12 @@
+@import '../../../stylings/abstracts/mixins';
+@import '../../../stylings/abstracts/variables';
+
+
+
+.landing {
+    margin: 2rem 0 2rem;
+    gap: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+

@@ -1,0 +1,88 @@
+@use '@angular/material' as mat;
+@import '../abstracts/variables';
+
+$primary-color-theme: (
+    50: lighten($primary-color, 40%),
+    100: lighten($primary-color, 30%),
+    200: lighten($primary-color, 20%),
+    300: lighten($primary-color, 10%),
+    400: lighten($primary-color, 5%),
+    500: $primary-color,
+    600: darken($primary-color, 5%),
+    700: darken($primary-color, 10%),
+    800: darken($primary-color, 15%),
+    900: darken($primary-color, 20%),
+    A100: lighten($primary-color, 50%),
+    A200: lighten($primary-color, 60%),
+    A400: lighten($primary-color, 70%),
+    A700: lighten($primary-color, 80%),
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$warn-color-theme: (
+    50: lighten($warning-color, 40%),
+    100: lighten($warning-color, 30%),
+    200: lighten($warning-color, 20%),
+    300: lighten($warning-color, 10%),
+    400: lighten($warning-color, 5%),
+    500: $warning-color,
+    600: darken($warning-color, 5%),
+    700: darken($warning-color, 10%),
+    800: darken($warning-color, 15%),
+    900: darken($warning-color, 20%),
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+    )
+);
+
+
+
+$accent-color-theme: (
+    50 : #e2f5ff,
+    100 : #b3e3ff,
+    200 : #80ceff,
+    300 : #4eb9ff,
+    400 : #26aaff,
+    500 : #009aff,
+    600 : #008def,
+    700 : #007cdb,
+    800 : #006ac7,
+    900 : #004aa0,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #854747,
+    )
+);

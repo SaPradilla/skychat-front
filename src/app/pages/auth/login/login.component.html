@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+
+<div class="login" >
+
+
+    <h1 class="main">Login</h1>
+
+    <form [formGroup]="loginForm" class="login__form">
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+            @if (loginForm.get('email')?.hasError('required')){
+                <mat-error>Email is required*</mat-error>
+            }
+            @if (loginForm.get('email')?.hasError('email')){
+                <mat-error>Email is not valid</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" required>
+            @if (loginForm.get('password')?.hasError('required')){
+                <mat-error>Password is required*</mat-error>
+            }
+            @if (loginForm.get('email')?.hasError('minLength')){
+                <mat-error>Password is too short</mat-error>
+            }
+        </mat-form-field>
+
+
+        <button mat-flat-button color="primary"> Join </button>
+
+    </form>
+
+    <app-auth-bottons></app-auth-bottons>
+
+
+</div>

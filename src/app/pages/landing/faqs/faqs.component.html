@@ -1,0 +1,62 @@
+
+<section class="landing__faqs" id="FAQS">
+    <h3> FAQS </h3>
+
+    <div class="landing__faqs__content">
+        <mat-accordion>
+
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title> How does Sky ensure the security and privacy of my data? </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Sky prioritizes your security and privacy. We use end-to-end encryption to protect your conversations
+                    and data. Additionally, we offer two-factor authentication (2FA) and advanced privacy settings so
+                    you have complete control over your information.</p>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title> Can I integrate Sky with other tools and apps? </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Yes, Sky offers powerful integrations with a wide range of third-party tools and apps, including
+                    cloud storage services like Google Drive and Dropbox, productivity apps like Trello and Asana, and
+                    calendar services like Google Calendar and Outlook.</p>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title> What kind of customization options does Sky offer? </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>
+                    Sky provides extensive customization options, including custom themes and color schemes,
+                    configurable notifications, and custom emojis and reactions. You can tailor Sky to fit the unique
+                    needs of your team.
+                </p>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title> How can I manage my team on Sky?</mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Sky offers robust team management features, including custom roles and permissions, user
+                    administration, and usage analytics and reports. You can easily manage your team and ensure everyone
+                    has the appropriate access.</p>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title> What kind of support does Sky provide? </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Sky provides 24/7 technical support to assist you with any issues or questions. We also offer
+                    detailed documentation, tutorials, and a user community and help forums for additional support.</p>
+            </mat-expansion-panel>
+            
+        </mat-accordion>
+
+    </div>
+    <div class="landing__faqs__icons">
+        <mat-icon>info</mat-icon>
+        <mat-icon>mode_comment</mat-icon>
+        <mat-icon>psychology_alt</mat-icon>
+    </div>
+</section>

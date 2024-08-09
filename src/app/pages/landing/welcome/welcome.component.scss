@@ -1,0 +1,79 @@
+@import '../../../../stylings/abstracts/mixins';
+@import '../../../../stylings/abstracts/variables';
+
+
+section.landing__welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 90vh;
+    .landing__welcome__content{
+        h1{
+            font-weight: 800;
+            // font-size: 4rem;
+            margin-bottom: 1rem;
+            @include text-gradient($primary-color);    
+        }
+        h2{
+           
+            margin-bottom: 1rem;
+            color: $secondary-color;
+            max-width: 20rem;
+        }
+
+    }
+    img.landing__welcome__vector{
+        height: 26rem;
+    }
+
+    &::after,
+    &::before{
+        @include blur-effect($primary-color,200px);
+    }
+    &::before{
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 500px;
+        transform: translate(-30%);
+    }
+    &::after{
+        top: 50%;
+        left: 0px;
+        width: 300px;
+        height: 300px;
+        transform: translateX(50%);
+    }
+
+    &{
+        @include mobile{
+            text-align: center;
+            .landing__welcome__content{
+                h1{
+                    font-size: 3rem;
+                }
+            }
+            margin-top: 25%;
+            flex-direction: column;
+            img.landing__welcome__vector{
+                height: 15rem;
+            }
+            &::after{
+                @include blur-effect($primary-color,140px);
+            }
+            &::before{
+                width: 0px;
+                height: 0px;
+                // transform: translate(-10%)
+            }
+            &::after{
+                top: 40%;
+                bottom: 50%;
+                width: 300px;
+                height: 300px;
+                transform: translateX(10%);
+            }
+        }
+    }
+}  

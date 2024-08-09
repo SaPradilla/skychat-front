@@ -1,0 +1,102 @@
+@import '../../../stylings/abstracts/variables';
+@import '../../../stylings/abstracts/mixins';
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: height 0.5s ease;
+    overflow: hidden;
+    height: 5rem;
+    background-color: rgba(0, 0, 0, 0.459);
+    backdrop-filter: blur(10px) ;
+    border-bottom: .6px solid $secondary-color ;
+    .navbar__container{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem 1rem;
+        h1{
+            cursor: pointer;
+        }
+
+        nav.navbar-content__mobile{
+            display: none;
+        }
+
+        nav.navbar-content{
+            position: relative;
+        }
+        .navbar__container__mobile__button{
+            display: none;
+        }
+    }
+    &{
+        @include mobile{
+            nav.navbar-content,
+            .navbar__container__join,
+            .navbar__container__auth{
+                display: none;
+            }
+
+            .navbar__container{
+                .navbar__container__mobile__button{
+                    display: inline;
+                }
+            }
+            
+        }
+    }
+
+    ul{
+        display: flex; 
+        gap: 1rem;
+        li{
+            list-style: none;
+            a{
+                color: $white-color;
+                text-decoration: none;
+                transition:  all 0.3s ease-in-out;
+                @include link-text-hover($primary-color);
+            }
+        }
+    }
+
+    .navbar__container__mobile{
+        margin-top: 3rem;
+        display: grid;
+        gap: 2rem;
+        place-content: center;
+        ul{
+            flex-direction: column;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+    }
+    &.show{
+        animation: slide-down 0.5s ease forwards;
+    }
+    &.hide{
+        animation: slide-up 0.5s ease forwards;
+    }
+}
+
+@keyframes slide-down {
+  from {
+    height: 5rem;
+  }
+  to {
+    height: 25rem;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    height: 25rem;
+  }
+  to {
+    height: 5rem;
+  }
+}

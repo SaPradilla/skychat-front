@@ -1,0 +1,26 @@
+
+@import '../abstracts/mixins';
+
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+    // &.main{
+    //     // color: green;
+    // }
+    @include mobile{
+        font-size: 3rem;
+    };
+
+}
+
+
+h2{
+
+    font-size: 2rem;
+
+}
+h3{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}

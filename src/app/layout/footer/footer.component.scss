@@ -1,0 +1,80 @@
+@import '../../../stylings/abstracts/variables';
+@import '../../../stylings/abstracts/mixins';
+
+footer{
+
+    width: 100%;
+    border-top: .5px solid $secondary-color;
+    
+    
+    .footer__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 2rem;
+
+        .footer__brand{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 1rem;
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                // text-align: left;
+                color: $secondary-color;
+                font-weight: 700;
+            }
+            img{
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    
+        .footer__option{
+            display: flex;
+            gap: 3rem;
+    
+            .footer__option__content{
+    
+                ul{
+                    margin: 1rem 0 1rem;
+                    list-style: none;
+                    li{
+                        cursor: pointer;
+                        font-weight: 700;
+                        color: $secondary-color;
+                        margin: .4rem 0 .4rem;
+    
+                    }
+                }
+            }
+    
+        }
+    }
+    p.footer__copyright{
+        color: $secondary-color;
+        text-align: center;
+    
+    }
+
+    &{
+
+        @include mobile{
+
+            .footer__content{
+                text-align: center;
+                gap: 2rem;
+                flex-direction: column;
+                .footer__brand{
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+        }
+
+    }
+
+}

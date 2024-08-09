@@ -1,0 +1,40 @@
+
+$mobile-breakpoint: 767px;
+$tablet-breakpoint: 1199px;
+
+
+@mixin link-text-hover($color-hover) {
+  &:hover {
+      color: $color-hover;
+  }
+}
+
+@mixin text-gradient($color-text){
+  background: $color-text;
+  background: linear-gradient(to bottom, $color-text 0%, #FFFFFF 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@mixin blur-effect($bg-color,$filter-blur-px){
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: $bg-color;
+  border-radius: 50%;
+  filter: blur($filter-blur-px);
+  mix-blend-mode: lighten;
+}
+
+@mixin mobile {
+  @media only screen and (width <= #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (width <= #{$tablet-breakpoint}) {
+    @content;
+  }
+}
